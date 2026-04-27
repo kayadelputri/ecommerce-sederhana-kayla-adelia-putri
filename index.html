@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumicake by Kay — Cake & Bakery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header id="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-icon">🐰</span>
+        <div>
+          <span class="logo-text">Lumicake by Kay</span>
+          <span class="logo-tagline">Cake & Bakery</span>
+        </div>
+      </div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#produk">Produk</a></li>
+          <li><a href="#kategori">Kategori</a></li>
+          <li><a href="#keranjang" class="nav-cart">🛒 Keranjang <span id="cart-count">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="home" class="hero">
+      <div class="hero-deco deco-1">🍓</div>
+      <div class="hero-deco deco-2">🌸</div>
+      <div class="hero-deco deco-3">🎂</div>
+      <div class="hero-deco deco-4">🍭</div>
+      <div class="hero-deco deco-5">✨</div>
+      <div class="hero-content">
+        <p class="hero-sub">✨ Handmade with Love ✨</p>
+        <h1>Selamat Datang di<br /><em>Toko Online</em><br /><span>Lumicake by Kay</span></h1>
+        <p class="hero-desc">Kue cantik, lembut, dan penuh cinta — untuk setiap momen spesialmu 🎀</p>
+        <a href="#produk" class="btn-hero">Lihat Koleksi Kami →</a>
+      </div>
+      <div class="hero-img-wrap">
+        <div class="hero-img-blob">
+          <img src="lumicake.png" alt="Kue cantik dari Amethyst Kay" />
+        </div>
+      </div>
+    </section>
+
+    <section id="kategori" class="kategori-section">
+      <div class="container">
+        <h2 class="section-title">Kategori</h2>
+        <div class="kategori-grid">
+          <div class="kategori-card">🎂 Birthday Cake</div>
+          <div class="kategori-card">💍 Wedding Cake</div>
+          <div class="kategori-card">🧁 Cupcake</div>
+          <div class="kategori-card">🍞 Pastry & Roti</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="produk" class="produk-section">
+      <div class="container">
+        <h2 class="section-title">Produk Unggulan</h2>
+        <p class="section-sub">Dibuat dengan bahan premium, dihias dengan penuh sayang 🌸</p>
+        <div class="produk-grid">
+
+          <article class="produk-card">
+            <div class="produk-img">
+              <img src="pearly butterfly.webp" alt="dream Cake lapis pink dengan hiasan kupu kupu" />
+              <span class="badge">Best Seller ⭐</span>
+            </div>
+            <div class="produk-info">
+              <h3>Pearly Butterfly Cake</h3>
+              <p class="produk-desc">Kue ombre pink glossy dihiasi kupu-kupu wafer & mutiara edible pearl. Cantik, elegan, dan cocok untuk momen spesialmu 🦋</p>
+              <p class="produk-harga">Rp 180.000 <span>/ loyang</span></p>
+              <button class="btn-cart" onclick="tambahKeranjang(this)">+ Tambah ke Keranjang</button>
+            </div>
+          </article>
+
+          <article class="produk-card">
+            <div class="produk-img">
+              <img src="sweet harmony cookies.webp" alt="sweet cookies" />
+              <span class="badge new">Baru 🌸</span>
+            </div>
+            <div class="produk-info">
+              <h3>Sweet Harmony Cookies</h3>
+              <p class="produk-desc">Cookies homemade dengan varian rasa pilihan dan toping cantik 🍪</p>
+              <p class="produk-harga">Rp 67.000 <span>/ pcs</span></p>
+              <button class="btn-cart" onclick="tambahKeranjang(this)">+ Tambah ke Keranjang</button>
+            </div>
+          </article>
+
+          <article class="produk-card">
+            <div class="produk-img">
+              <img src="rose macaron box.jpg" alt="Rose Macaron cantik berwarna pink pastel" />
+            </div>
+            <div class="produk-info">
+              <h3>Rose Macaron Box</h3>
+              <p class="produk-desc">Macaron rasa mawar asli, cantik untuk hadiah 🌹</p>
+              <p class="produk-harga">Rp 52.000 <span>/ isi 9</span></p>
+              <button class="btn-cart" onclick="tambahKeranjang(this)">+ Tambah ke Keranjang</button>
+            </div>
+          </article>
+
+          <article class="produk-card">
+            <div class="produk-img">
+              <img src="blueberry cheesecake.jpg" alt="Sakura Chiffon Cake lembut berwarna pink muda" />
+              <span class="badge sale">Diskon 20% 🎀</span>
+            </div>
+            <div class="produk-info">
+              <h3>Blueberry Cheesecake Bliss</h3>
+              <p class="produk-desc">Chessecake lembut dengan saus blueberry segar 🍰</p>
+              <p class="produk-harga">Rp 14.000 <span>/ slice</span></p>
+              <button class="btn-cart" onclick="tambahKeranjang(this)">+ Tambah ke Keranjang</button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <div id="notif" class="notif hidden">🎀 Produk ditambahkan ke keranjang!</div>
+
+  </main>
+
+  <footer id="keranjang">
+    <div class="footer-top"><div class="footer-bow">🎀</div></div>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-text">Lumicake by Kay</span>
+        <p class="logo-tagline" style="margin-bottom:10px">Cake & Bakery</p>
+        <p>Setiap gigitan adalah kebahagiaan yang kami buat dengan sepenuh hati 💕</p>
+      </div>
+      <div class="footer-kontak">
+        <h4>Kontak Kami</h4>
+        <p>📧 @LumicakebyKay.id</p>
+        <p>📱 +62 858-6857-0216</p>
+        <p>📍 Jl. Suci No 62, Kota Bandung</p>
+      </div>
+      <div class="footer-sosmed">
+        <h4>Ikuti Kami</h4>
+        <p><a href="#">Instagram @Lumicakeby_Kay</a></p>
+        <p><a href="#">TikTok @Lumicakeby_Kay
+      </div>
+    </div>
+    <div class="footer-copy">&copy; 2026 Lumicake by Kay Cake & Bakery 🌸 All rights reserved.</div>
+  </footer>
+
+  <script>
+    let cartCount = 0;
+    function tambahKeranjang(btn) {
+      cartCount++;
+      document.getElementById('cart-count').textContent = cartCount;
+      const notif = document.getElementById('notif');
+      notif.classList.remove('hidden');
+      clearTimeout(window._notifTimer);
+      window._notifTimer = setTimeout(() => notif.classList.add('hidden'), 2200);
+    }
+  </script>
+
+</body>
+</html>
