@@ -81,7 +81,7 @@ const PRODUK_DATA = [
   {
     id: 8,
     nama: "Dubai Chocolate Chewy Cookie",
-    kategori: "cookie",
+    kategori: "cookies",
     harga: 45000,
     satuan: "pcs",
     gambar: "dubai chocolate chewy cookie.jpg",
@@ -103,7 +103,7 @@ const PRODUK_DATA = [
   {
     id: 10,
     nama: "Molten Chocolate Lava Cake",
-    kategori: "cake",
+    kategori: "cakes",
     harga: 35000,
     satuan: "pcs",
     gambar: "molten chocolate lava cake.jpg",
