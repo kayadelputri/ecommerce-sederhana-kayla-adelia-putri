@@ -4,7 +4,7 @@ const PRODUK_DATA = [
   {
     id: 1,
     nama: "Pearly Butterfly Cake",
-    kategori: "birthday cake",
+    kategori: "cakes",
     harga: 180000,
     satuan: "loyang",
     gambar: "pearly butterfly.webp",
@@ -37,7 +37,7 @@ const PRODUK_DATA = [
   {
     id: 4,
     nama: "Blueberry Cheesecake Bliss",
-    kategori: "pastry",
+    kategori: "cakes",
     harga: 14000,
     satuan: "slice",
     gambar: "blueberry cheesecake.jpg",
@@ -48,7 +48,7 @@ const PRODUK_DATA = [
   {
     id: 5,
     nama: "Lily Blossom Wedding Cake",
-    kategori: "wedding cake",
+    kategori: "wedding",
     harga: 3500000,
     satuan: "3 tier",
     gambar: "lily blossom wedding cake.jpg",
@@ -70,7 +70,7 @@ const PRODUK_DATA = [
   {
     id: 7,
     nama: "Cookies & Cream Cake",
-    kategori: "birthday cake",
+    kategori: "cakes",
     harga: 165000,
     satuan: "loyang",
     gambar: "cookies & cream cake.jpg",
@@ -81,7 +81,7 @@ const PRODUK_DATA = [
   {
     id: 8,
     nama: "Dubai Chocolate Chewy Cookie",
-    kategori: "cake",
+    kategori: "cookie",
     harga: 45000,
     satuan: "pcs",
     gambar: "dubai chocolate chewy cookie.jpg",
@@ -102,7 +102,7 @@ const PRODUK_DATA = [
   },
   {
     id: 10,
-    nama: "Molten Chocolate Lava brownies",
+    nama: "Molten Chocolate Lava Cake",
     kategori: "cake",
     harga: 35000,
     satuan: "pcs",
