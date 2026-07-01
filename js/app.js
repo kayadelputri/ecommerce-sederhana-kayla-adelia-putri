@@ -64,7 +64,7 @@ function renderProduk() {
 }
 
 function labelKategori(k) {
-  const map = { birthday:'🎂 Birthday', wedding:'💍 Wedding', cupcake:'🧁 Cupcake', pastry:'🍞 Pastry', cookies:'🍪 Cookies' };
+  const map = { cakes:'🎂 Cakes', wedding:'💍 Wedding', cupcake:'🧁 Cupcake', pastry:'🍞 Pastry', cookies:'🍪 Cookies & sweet Treats' };
   return map[k] || k;
 }
 
