@@ -3,7 +3,7 @@
 // ====== STATE ======
 let filterKategori = 'semua';
 let searchQuery = '';
-let maxHarga = 300000;
+let maxHarga = 5000000;
 let sortBy = 'default';
 let modalQty = 1;
 let modalProdukId = null;
@@ -46,7 +46,7 @@ function renderProduk() {
   grid.innerHTML = list.map(p => `
     <article class="produk-card" data-id="${p.id}" data-kategori="${p.kategori}">
       <div class="produk-img" onclick="bukaModal(${p.id})" role="button" tabindex="0" aria-label="Lihat detail ${p.nama}">
-        <img src="${p.gambar}" alt="${p.nama}" loading="lazy" onerror="this.src='images/placeholder.jpg'" />
+        <img src="${p.gambar}" alt="${p.nama}" loading="lazy" onerror="this.src='placeholder.jpg'" />
         ${p.badge ? `<span class="badge ${p.badgeClass}">${p.badge}</span>` : ''}
       </div>
       <div class="produk-info">
@@ -64,7 +64,13 @@ function renderProduk() {
 }
 
 function labelKategori(k) {
-  const map = { cakes:'🎂 Cakes', wedding:'💍 Wedding', cupcake:'🧁 Cupcake', pastry:'🍞 Pastry', cookies:'🍪 Cookies & sweet Treats' };
+  const map = {
+    cakes:   '🎂 Cakes',
+    wedding: '💍 Wedding Cakes',
+    cupcake: '🧁 Cupcakes',
+    pastry:  '🍞 Pastry & Bread',
+    cookies: '🍪 Cookies & Sweet Treats'
+  };
   return map[k] || k;
 }
 
@@ -163,7 +169,7 @@ function initEvents() {
     document.getElementById('mainNav')?.classList.toggle('open');
   });
 
-  // Keyboard accessibility for modal
+  // Keyboard accessibility
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
       tutupModal();
@@ -222,7 +228,6 @@ function tutupModal() {
 // ====== CHECKOUT ======
 function bukaCheckout() {
   document.getElementById('checkoutPage')?.classList.remove('hidden');
-  document.getElementById('produk')?.scrollIntoView({ behavior: 'smooth' });
   renderCheckoutItems();
   window.scrollTo({ top: 0, behavior: 'smooth' });
   if (typeof trackEvent === 'function') trackEvent('checkout', 'begin_checkout', 'cart');
@@ -242,7 +247,6 @@ function prosesCheckout() {
   document.getElementById('orderId').textContent = `ID Pesanan: ${orderId}`;
   document.getElementById('successOverlay')?.classList.remove('hidden');
 
-  // Kosongkan cart setelah order berhasil
   kosongkanCart();
 
   if (typeof trackEvent === 'function') trackEvent('checkout', 'purchase', orderId);
