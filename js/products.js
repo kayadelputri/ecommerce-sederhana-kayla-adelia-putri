@@ -20,7 +20,7 @@ const PRODUK_DATA = [
     satuan: "pcs",
     gambar: "sweet harmony cookies.webp",
     deskripsi: "Cookies homemade dengan varian rasa pilihan dan toping cantik. Renyah di luar, lembut di dalam 🍪",
-    badge: "Baru 🌸",
+    badge: "New 🌸",
     badgeClass: "new"
   },
   {
